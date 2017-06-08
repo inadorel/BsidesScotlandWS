@@ -24,7 +24,7 @@ namespace BsidesScotlandWS.Models
         public string gender { get; set; }
         public string talkTitle { get; set; }
         public bool international { get; set; }
-        public DateTime dateSubmitted { get; set; }
+        public string dateSubmitted { get; set; }
         public bool expReq { get; set; }
         public string track { get; set; }
         public bool talkAccepted { get; set; }
