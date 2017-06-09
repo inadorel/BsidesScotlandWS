@@ -41,8 +41,51 @@
         </div>
     </div>
     <!-- /ko -->
-    <div class="col-md-4">
-        <!-- TODO: Add new sponsor -->
+   
+    <div class="col-md-8">
+        <div class="col-md-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Add Sponsor</h2>
+                </div>
+
+                <div class="panel-body">
+                    <form class="form-horizontal" data-bind="submit: addSponsor">
+
+
+                        <div class="form-group" data-bind="with: newSponsor">
+
+                            <label for="inputFirstName" class="col-md-4 control-label">First Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="inputFirstName" data-bind="value:sponsorFirstName" />
+                            </div>
+
+                            <label for="inputSurname" class="col-md-4 control-label">Surname</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="inputSurname" data-bind="value:sponsorLastName" />
+                            </div>
+
+                            <label for="inputCompanyName" class="col-md-4 control-label">Company Name</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="inputCompanyName" data-bind="value:sponsorCompanyName" />
+                            </div>
+
+                            <label for="inputLevel" class="col-md-4 control-label">Level</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="inputLevel" data-bind="value:sponsorLevel" />
+                            </div>
+
+                            <label for="inputStatus" class="col-md-4 control-label">Status</label>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" id="inputStatus" data-bind="value:sponsorStatus" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+    
 </div>
 

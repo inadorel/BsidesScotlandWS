@@ -34,6 +34,33 @@
 
     // Fetch the initial data.
     getAllSponsors();
+
+  
+    self.newSponsor = {
+    sponsorFirstName: ko.observable(),
+    sponsorLastName: ko.observable(),
+    sponsorCompanyName: ko.observable(),
+    sponsorLevel: ko.observable(),
+    sponsorStatus: ko.observable()
+           }
+    
+
+self.addSponsor = function (formElement) {
+    var sponsor = {
+        sponsorFirstName: self.newSponsor.sponsorFirstName(),
+        sponsorLastName: self.newSponsor.sponsorLastName(),
+        sponsorCompanyName: self.newSponsor.sponsorCompanyName(),
+        sponsorLevel: self.newSponsor.sponsorLevel(),
+        sponsorStatus: self.newSponsor.sponsorStatus()
+    };
+
+    var sponsorsUri = '/api/sponsors/';
+    ajaxHelper(sponsorsUri, 'POST', sponsor).done(function (item) {
+        self.sponsors.push(item);
+    });
+}
+
+// getSponsors();
 };
 
 ko.applyBindings(new ViewModel());
