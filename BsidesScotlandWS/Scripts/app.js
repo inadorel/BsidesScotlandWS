@@ -32,6 +32,12 @@
         });
     }
 
+    self.deleteSponsor = function (item) {
+        ajaxHelper(sponsorsUri + item.SponsorId, 'DELETE').done(function (data) {
+            self.detail(data);
+        });
+    }
+
     // Fetch the initial data.
     getAllSponsors();
 

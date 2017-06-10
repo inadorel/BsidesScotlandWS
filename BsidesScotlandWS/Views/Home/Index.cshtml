@@ -37,6 +37,7 @@
                 <tr><td>Company Name</td><td data-bind="text: detail().sponsorCompanyName"></td></tr>
                 <tr><td>Level</td><td data-bind="text: detail().sponsorLevel"></td></tr>
                 <tr><td>Status</td><td data-bind="text: detail().sponsorStatus"></td></tr>
+                <tr><td> </td><td><button data-bind="click: deleteSponsor(detail())" type="button" class="btn btn-primary">Delete</button></td></tr>
             </table>
         </div>
     </div>
@@ -86,6 +87,6 @@
             </div>
         </div>
     </div>
-    
+   
 </div>
 
